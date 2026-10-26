@@ -1,66 +1,42 @@
-\# Experiment 1: Data Preprocessing (Data Cleaning) Using Orange
+# Experiment 1: Data Cleaning and Preprocessing Using Orange
 
+## Objective
 
+To prepare the Titanic dataset for analysis by identifying and handling missing values using Orange Data Mining.
 
-\## Aim
+## Dataset Details
 
-To preprocess the Titanic dataset by handling missing values using Orange Data Mining and generate a cleaned dataset for further analysis.
+- **Dataset Name:** `titanic.csv`
+- **Total Instances:** 891
+- **Number of Features:** 8
+- **Software Used:** Orange Data Mining
 
+## Workflow
 
-
-\## Dataset
-
-\- \*\*Dataset:\*\* Titanic Dataset (`titanic.csv`)
-
-\- \*\*Total Records:\*\* 891
-
-\- \*\*Features Used:\*\* 8
-
-\- \*\*Tool:\*\* Orange Data Mining
-
-
-
-\## Workflow
-
-```
-
+```text
 File → Impute → Data Table
-
 ```
 
+## Steps Performed
 
+1. Imported the **Titanic** dataset into Orange through the **File** widget.
+2. Connected the dataset to the **Impute** widget for missing value treatment.
+3. Configured the imputation method by assigning:
+   - **Mean** for numerical attributes.
+   - **Most Frequent** for categorical attributes.
+4. Linked the processed output to the **Data Table** widget.
+5. Examined the resulting dataset to ensure all missing entries were appropriately handled.
 
-\## Procedure
+## Output
 
-1\. Loaded the \*\*Titanic\*\* dataset into Orange using the \*\*File\*\* widget.
+- Missing values in the **Age** column were replaced with the corresponding mean value.
+- Missing categorical attributes were filled using the most commonly occurring category.
+- The processed dataset retained all **891 records** while improving data completeness.
 
-2\. Connected the dataset to the \*\*Impute\*\* widget to handle missing values.
+## Discussion
 
-3\. Applied the \*\*Average\*\* method for numerical attributes and the \*\*Most Frequent\*\* method for categorical attributes.
+Applying imputation removed incomplete data issues without discarding records. This preprocessing step enhanced the reliability and consistency of the dataset, making it suitable for visualization, statistical analysis, and machine learning tasks.
 
-4\. Sent the processed dataset to the \*\*Data Table\*\* widget.
+## Conclusion
 
-5\. Verified that the missing values were successfully replaced and the cleaned dataset was ready for analysis.
-
-
-
-\## Output
-
-\- Missing values in numerical attributes (such as \*\*Age\*\*) were filled using the \*\*mean\*\* value.
-
-\- Missing categorical values were replaced using the \*\*most frequently occurring\*\* category.
-
-\- The cleaned dataset contained \*\*891 records\*\* with no unresolved missing values in the selected attributes.
-
-
-
-\## Observation
-
-The preprocessing step improved the quality of the dataset by removing incomplete entries through imputation, ensuring consistency before performing machine learning or data mining tasks.
-
-
-
-\## Result
-
-The Titanic dataset was successfully preprocessed using the \*\*Impute\*\* widget in Orange Data Mining. Missing values were handled effectively, and the cleaned dataset was generated for subsequent analysis.
-
+The Titanic dataset was successfully cleaned using the **Impute** widget in Orange Data Mining. The resulting dataset is complete, consistent, and ready for further data mining and predictive analysis.
